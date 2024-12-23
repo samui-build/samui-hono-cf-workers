@@ -25,6 +25,6 @@ id = "6e6599552be54693985312d3c77dd580"
 # [ai]
 # binding = "AI"
 
-# [observability]
-# enabled = true
+[observability.logs]
+enabled = true
 # head_sampling_rate = 1
