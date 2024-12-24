@@ -7,7 +7,7 @@ compatibility_date = "2024-12-23"
 [vars]
 SIGNER_SECRET_KEY = ""
 SOLANA_RPC_URL = "https://api.devnet.solana.com"
-SOLANA_RPC_URL_SUBSCRIPTIONS = "wss://api.devnet.solana.com"
+SOLANA_RPC_URL_SUBSCRIPTIONS = ""
 
 [[kv_namespaces]]
 binding = "SAMUI_HONO_CF_WORKERS_KV"
