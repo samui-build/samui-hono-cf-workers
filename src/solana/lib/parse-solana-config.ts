@@ -1,13 +1,13 @@
-import { z } from 'zod'
+import * as v from 'valibot'
 
-const schema = z.object({
-  signerSecretKey: z.string().min(1),
-  rpcUrl: z.string().url(),
-  rpcUrlSubscriptions: z.string().url(),
+const schema = v.object({
+  signerSecretKey: v.pipe(v.string(), v.minLength(10, 'The secret is too short')),
+  rpcUrl: v.pipe(v.string(), v.url('The URL must be a valid')),
+  rpcUrlSubscriptions: v.pipe(v.string(), v.url('The URL must be a valid')),
 })
 
-export type SolanaConfig = z.infer<typeof schema>
+export type SolanaConfig = v.InferOutput<typeof schema>
 
 export function parseSolanaConfig(params: Record<string, string>): SolanaConfig {
-  return schema.parse(params)
+  return v.parse(schema, params)
 }
