@@ -5,6 +5,7 @@
     "deploy": "wrangler deploy --minify"
   },
   "dependencies": {
+    "@samui/solana": "^1.1.0",
     "@solana/web3.js": "2",
     "hono": "^4.6.14",
     "valibot": "^1.0.0-beta.9"
@@ -13,6 +14,6 @@
     "@cloudflare/workers-types": "^4.20241218.0",
     "@types/bun": "^1.1.14",
     "prettier": "3.4.2",
-    "wrangler": "^3.96.0"
+    "wrangler": "^3.99.0"
   }
 }

@@ -1,7 +1,7 @@
 name = "samui-hono-cf-workers"
 main = "src/index.ts"
 compatibility_date = "2024-12-23"
-
+compatibility_flags = ["nodejs_compat_v2"]
 keep_vars = true
 
 [vars]
